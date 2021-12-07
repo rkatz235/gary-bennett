@@ -1,0 +1,121 @@
+@font-face {
+    font-family: CurFont;
+    src: url("../img/helvetica-neue-lt-com-55-roman.ttf")
+}
+:root {
+    --bg-grey: rgb(89, 86, 86);
+    --footer-height: 72px;
+    --desktop-margin: 48px;
+    --mobile-margin: 8px;
+    --mobile-footer: 8px;
+    --font-size: 12px;
+    --menu-height: 247px;
+    --hamburger-margin: 70px;
+    --hamburger-mobile-margin: 17px;
+    --footer-font-size: 9px;
+    --nav-padding: 18px;
+}
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a, h1, h2, h3, h4, h5, h6, li, p {
+    font-family: CurFont, 'Helvetica Neue';
+    margin: 0;
+    color: white;
+}
+
+a:focus {
+    outline: none;
+}
+a, button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+p {
+    font-size: var(--font-size);
+    color: white;
+}
+
+body {
+    margin: 0;
+}
+button {
+    padding: 0;
+}
+button:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/*containers*/
+html:before, html:after, body:before, body:after {
+    content: "";
+    position: fixed;
+    background: transparent;
+    z-index: 5;
+}
+body:before, body:after {
+    content: "";
+    position: fixed;
+    background:white;
+    left: 0;
+    right: 0;
+    height: var(--desktop-margin);
+    z-index: 5;
+
+}
+body:before {
+    top: 0;
+}
+body:after {
+    bottom: 0;
+}
+
+.page-container {
+    margin: var(--desktop-margin);
+    background-color: var(--bg-grey);
+    min-height: calc(100vh - var(--desktop-margin) - var(--footer-height));
+    z-index: -1;
+}
+.page-container.white {
+    background-color: white;
+}
+
+footer {
+    height: var(--footer-height);
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+footer.hide-footer > * {
+    display: none;
+}
+
+footer > div {
+    opacity: 0.8;
+}
+footer div p {
+    color: var(--bg-grey);
+    text-align: center;
+    padding-bottom: 6px;
+    font-size: 9px;
+    padding-top: 12px;
+    display: none;
+}
+footer div a {
+    display: none;
+    justify-content: center;
+}
+footer div a img {
+    width: 18px;
+    height: 18px;
+}

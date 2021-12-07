@@ -1,0 +1,47 @@
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    html {
+        height: 100%;
+    }
+    body:before {
+        height: var(--mobile-margin);
+    }
+    body:after {
+        height: var(--mobile-footer);
+    }
+    body {
+        height: calc(100% - var(--mobile-margin) - var(--mobile-footer));
+    }
+    #root {
+        /* height:100%; */
+        overflow: scroll;
+        min-height: calc(100vh - var(--mobile-footer) - var(--mobile-margin));
+    }
+    #root.fix-root {
+        overflow: hidden;
+        height: 100vh;
+    }
+    #root.fix-root .page-container {
+        overflow: hidden;
+    }
+    .hamburger-box {
+        margin-bottom: 33px;
+    }
+    .page-container {
+        margin: var(--mobile-margin) var(--mobile-margin) var(--mobile-footer) var(--mobile-margin);
+        min-height: calc(100vh - var(--mobile-margin) - var(--mobile-footer));
+        /* height: 100%; */
+    }
+    footer {
+        display: none;
+    }
+    footer > div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    footer > div p {
+        padding-bottom: 5px;
+    }
+}

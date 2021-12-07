@@ -1,0 +1,55 @@
+.profile-container {
+    /* 20px for link padding and 70px for distance bw hamburger and first link*/
+    padding-top: calc(var(--menu-height) - var(--nav-padding) - 20px + 70px);
+    padding-left: var(--nav-padding);
+    padding-bottom: var(--nav-padding);
+    width: 65%;
+    position: absolute;
+    bottom: calc(var(--desktop-margin) + var(--nav-padding));
+    /* max-width: 330px; */
+
+}
+.profile-container p, .profile-container ul {
+    margin-bottom: 10px;
+
+}
+.profile-container p span::before {
+    content: "\2022";
+    color: white;
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: 0.5em; /* Also needed for space (tweak if needed) */
+    
+}
+/* .profile-container ul {
+    margin-bottom: 24px;
+    list-style-type: circle;
+}
+.profile-container li {
+    font-size: var(--font-size);
+} */
+/*for ipad pro and below*/
+@media only screen and (max-width: 1024px){
+    .profile-container {
+        position: relative;
+        /* padding-top: calc(var(--menu-height) - var(--nav-padding)); */
+        padding-top: calc(var(--menu-height) + var(--hamburger-margin) );
+        bottom: 0;
+    }
+}
+
+/*for phones*/
+@media only screen and (max-width : 480px) {
+    .profile-container {
+        width: calc(100% - var(--nav-padding));
+        background-color: var(--bg-grey);
+        padding-right: 0;
+        padding-bottom: 0;
+        bottom: var(--nav-padding);
+        padding-top: calc(var(--menu-height) + var(--hamburger-mobile-margin) );
+
+    }
+    .profile-container p {
+        margin-right: var(--nav-padding);
+    }
+}

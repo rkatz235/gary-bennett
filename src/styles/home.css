@@ -1,0 +1,61 @@
+.home-container {
+    height: calc(100% - var(--desktop-margin) - var(--footer-height));
+    position: relative;
+}
+
+.home-container .each-fade {
+    height: calc(100vh - var(--desktop-margin) - var(--footer-height));
+    width: 100%; 
+    display: flex;
+}
+
+.react-slideshow-fade-wrapper .react-slideshow-fade-images-wrap>div img {
+
+    object-fit: cover;
+    height: 100%;
+    min-width: 100%;
+} 
+
+/*hide slideshow buttons*/
+.home-container .react-slideshow-container button {
+    display: none;
+}
+.logo-container {
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#home-logo{
+    width: 30%;
+    min-width: 300px;
+    margin-top: -45px;
+    /* margin-left: -30px; */
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .home-container, 
+    .home-container .slide-container,
+    .home-container .slide-container > div,
+    .home-container .slide-container > div .react-slideshow-container,
+    .home-container .slide-container > div .react-slideshow-container .react-slideshow-fade-images-wrap  {
+        height: calc(100vh - var(--mobile-margin)*2);
+        overflow: hidden;
+
+    }
+    .home-container .each-fade, .react-slideshow-fade-wrapper .react-slideshow-fade-images-wrap>div img {
+        height: 100vh;
+    }
+    .logo-container {
+        height: calc(100% - var(--mobile-margin)*2);
+    }
+    #home-logo {
+        margin-left: 0;
+    }
+}
+
+

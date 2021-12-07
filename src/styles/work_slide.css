@@ -1,0 +1,105 @@
+/*slide counter*/
+.slide-counter {
+    margin-top: 122px;
+}
+.slide-counter .arrows {
+    margin-bottom: 23px;
+}
+.slide-counter .arrows button, button.nav.default-nav  {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    background-color: transparent;
+    border-top: solid 1px grey !important;
+    border-left: solid 1px grey;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 0;
+}
+.slide-counter .arrows button:first-of-type, button.nav.default-nav:first-of-type {
+    transform: rotate(-45deg);
+}
+.slide-counter .arrows button:last-of-type, button.nav.default-nav:last-of-type {
+    transform: rotate(135deg);
+}
+.slide-counter .arrows .default-nav:hover {
+    cursor: pointer;
+}
+
+.full-project .react-slideshow-fade-wrapper .react-slideshow-fade-images-wrap>div img {
+    object-fit: contain;
+}
+
+.slide-counter .arrows .default-nav[data-type="next"] {
+    margin-left: 15px;
+}
+.slide-counter .arrows .default-nav img {
+    width: 16px;
+    height: 16px;
+}
+.slide-counter p {
+    color: grey;
+    letter-spacing: 0.23em;
+}
+/*slideshow*/
+
+.full-project {
+    width: calc(100% - 80px);
+    float: right;
+    height: calc(100% - var(--desktop-margin) - var(--footer-height));
+}
+.full-project .react-slideshow-container {
+    margin-left: var(--desktop-margin);
+}
+.full-project .react-slideshow-fade-wrapper .react-slideshow-fade-images-wrap>div {
+    height: calc(100vh - var(--desktop-margin) - var(--footer-height));
+    display: flex;
+    justify-content: center;
+}
+.react-slideshow-fade-wrapper .react-slideshow-fade-images-wrap>div img {
+    height: 100%;
+    width: auto !important;
+}
+.nav.default-nav:focus, .nav.default-nav:hover {
+    background-color: none !important;
+    background: none;
+}
+.nav.default-nav svg {
+    display: none;
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .page-container.hide-nav #nav-list {
+        display: none;
+    }
+    .slide-counter {
+        margin-top: 0;
+        position: absolute;
+        top: -2px;
+        right: calc(-100vw + 95px);
+    }
+    .full-project {
+        width: calc(100% - var(--mobile-margin) - var(--mobile-margin));
+        margin-top: -50px; /*for ios safari action bar*/
+    }
+    .full-project .react-slideshow-container {
+        /* margin-left: var(--mobile-margin); */
+        margin-left: 0;
+    }
+    .full-project .react-slideshow-fade-wrapper {
+        margin-left: calc(var(--mobile-margin) + 1px);
+    }
+    .full-project .react-slideshow-fade-wrapper .react-slideshow-fade-images-wrap>div {
+        height: calc(100vh - var(--mobile-margin) - var(--mobile-footer));
+    }
+    .full-project .react-slideshow-container .default-nav:last-of-type {
+        margin-left: -20px;
+    }
+    .full-project button.nav.default-nav {
+        border-top: solid 1px white !important;
+        border-left: solid 1px white;
+        z-index: 10000;
+
+    }
+}

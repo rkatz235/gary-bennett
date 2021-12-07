@@ -1,0 +1,38 @@
+.work-container {
+    padding: 21px 80px 21px 80px;
+}
+.work-container .thumb-container {
+    max-width: 946px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 23px;
+}
+.work-container .thumb {
+    width: 214px;
+    height: 160px;
+    margin: 35px;
+}
+.work-container .thumb img {
+    width: auto;
+    height: 100%;
+    transition: filter 0.3s;
+}
+.work-container .thumb img:hover {
+    cursor: pointer;
+    filter: grayscale(90%);
+}
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .work-container {
+        background-color: var(--bg-grey);
+    }
+    .work-container .thumb {
+        width: 156px;
+        height: 120px;
+    }
+    .work-container .thumb-container {
+        padding-bottom: 0px;
+    }
+    
+}
